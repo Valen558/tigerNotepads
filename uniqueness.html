@@ -1,0 +1,60 @@
+<html>
+
+
+<script src="dataRows.js"></script>
+
+
+<script>
+( function initializer(){
+
+
+Array.prototype.contains=function (obj){
+
+	var i = this.length;
+	while (i--) {
+		if (this[i] === obj) {
+			return true;
+		}
+	}
+	return false;
+}
+}
+)()
+
+var checker=new function checkerInitialization()
+{
+
+
+this.checkUniqueness=function()
+{
+
+
+disValues=[];
+var dupValue=false;
+
+for(var i=0;i<allSudokus.length;i++)
+{
+
+if(disValues[allSudokus[i][0]] === undefined) disValues[allSudokus[i][0]]=0; else 
+{
+disValues[allSudokus[i][0]]++;
+console.log("duplicate value discovered :"+allSudokus[i][0]);
+dupValue=true;
+}
+
+
+}
+
+if(dupValue) console.log("There are duplicate values"); else console.log("No duplicate values");
+}
+
+}
+
+
+checker.checkUniqueness();
+
+
+
+</script>
+
+</html>
